@@ -38,13 +38,13 @@ def fillForm(res):
     s = requests.session()
     headers = {
         'Accept': 'application/json, text/javascript, */*; q=0.01',
-        'Referer': 'https://app.buaa.edu.cn/site/buaaStudentNcov/index',
+        'Referer': 'https://app.buaa.edu.cn/ncov/wap/default/index',
         'X-Requested-With': 'XMLHttpRequest',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36',
         'Content-Type': 'application/x-www-form-urlencoded',
         'Cookie': res.headers['set-cookie']
     }
-    r = s.post('https://app.buaa.edu.cn/buaaxsncov/wap/default/save', data=form_data, headers=headers)
+    r = s.post('https://app.buaa.edu.cn/ncov/wap/default/save', data=form_data, headers=headers)
     return r
 
 
