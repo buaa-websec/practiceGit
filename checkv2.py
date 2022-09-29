@@ -21,7 +21,7 @@ def bot_post(text):
         re_result = requests.get(url2)
         print(re_result.text)
     if bark_url != "":
-        url3 = bark_url + text
+        url3 = bark_url + text + '?icon=https://imgapp.buaa.edu.cn/image/25/c2adaf73e7b4ea6058125d26d2392e21.jpg'
         re_result = requests.get(url3)
         print(re_result.text)
         
