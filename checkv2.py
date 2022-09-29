@@ -56,6 +56,6 @@ def fillForm(res):
 def main():
     result = fillForm(buaaLogin(your_name, your_pwd))
     print(result.text)
-    bot_post(result["m"])
+    bot_post(result.text)
     return("DONE")
 main()
