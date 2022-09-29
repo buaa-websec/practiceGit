@@ -8,6 +8,7 @@ your_pwd = os.environ["YOUR_PWD"]
 wechat_key = os.environ["WECHAT_KEY"]
 token = os.environ["TOKEN"]
 chat_id = os.environ["CHAT_ID"]
+bark_url = os.environ["BARK"]
 form_data = os.environ["FORM"]
 
 def bot_post(text):
@@ -19,7 +20,11 @@ def bot_post(text):
         url2 = 'https://api.telegram.org/bot'+token+'/sendMessage?chat_id='+chat_id+'&text='+text+time.strftime("%m-%d", time.localtime())
         re_result = requests.get(url2)
         print(re_result.text)
-
+    if bark_url != "":
+        url3 = bark_url + text
+        re_result = requests.get(url3)
+        print(re_result.text)
+        
 
 def buaaLogin(user_name, password):
     print("统一认证登录")
