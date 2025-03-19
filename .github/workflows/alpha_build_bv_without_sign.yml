@@ -20,9 +20,9 @@ jobs:
 
       - name: Modify MainActivity.kt
         run: |
-          sed -i 's/isMainlandChina = NetworkUtil.isMainlandChina()/isMainlandChina = false/g'  app/src/main/kotlin/dev/aaa1115910/bv/activities/MainActivity.kt
-          sed -i '/RegionBlockScreen()/d'  app/src/main/kotlin/dev/aaa1115910/bv/activities/MainActivity.kt
-          sed -i '/} else if (isMainlandChina) {/d'  app/src/main/kotlin/dev/aaa1115910/bv/activities/MainActivity.kt
+          sed  's/isMainlandChina = NetworkUtil.isMainlandChina()/isMainlandChina = false/g'  app/src/main/kotlin/dev/aaa1115910/bv/activities/MainActivity.kt
+          sed  '/RegionBlockScreen()/d'  app/src/main/kotlin/dev/aaa1115910/bv/activities/MainActivity.kt
+          sed  '/} else if (isMainlandChina) {/d'  app/src/main/kotlin/dev/aaa1115910/bv/activities/MainActivity.kt
 
 
       - name: Set up JDK 17
